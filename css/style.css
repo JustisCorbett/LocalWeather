@@ -8,6 +8,9 @@ body {
 .titleText{
     font-size: 7.6em;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .weatherBox{
     display: flex;
