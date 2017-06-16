@@ -1,6 +1,5 @@
 body {
     height: 100%;
-    display: flex;
     background: black;
 }
 weatherBox{
