@@ -2,14 +2,16 @@ body {
     height: 100%;
     background: black;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
 }
 .titleText{
     font-size: 7.6em;
+    font-family: 'Roboto', sans-serif;
 }
 .weatherBox{
     display: flex;
     justify-content: center;
-    
     align-items: center;
     flex: 1;
 }
