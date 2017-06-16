@@ -2,7 +2,10 @@ body {
     height: 100%;
     background: black;
 }
-weatherBox{
+.titleText{
+    font-size: 7.6em;
+}
+.weatherBox{
     display: flex;
     justify-content: center;
     
@@ -10,7 +13,7 @@ weatherBox{
     flex: 1;
 }
 @media screen and (max-width: 960px) {
-    .title-text {
+    .titleText {
         font-size: 5em;
     }
     .container-quote {
@@ -18,7 +21,7 @@ weatherBox{
     }
 }
 @media screen and (max-width: 480px) {
-    .title-text {
+    .titleText {
         font-size: 3.375em;
     }
     .container-quote {
