@@ -1,6 +1,7 @@
 body {
     height: 100%;
     background: black;
+    color: white;
 }
 .titleText{
     font-size: 7.6em;
