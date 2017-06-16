@@ -3,7 +3,7 @@ body {
     background: black;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    
+    font-size: 3.375em;
 }
 .titleText{
     font-size: 5em;
@@ -28,15 +28,15 @@ body {
     .titleText {
         font-size: 3.375em;
     }
-    .container-quote {
+    body {
         font-size: 2.25em;
     }
 }
 @media screen and (max-width: 480px) {
     .titleText {
-        font-size: 2.25em;
+        font-size: 2em;
     }
-    .container-quote {
-        font-size: 1.5em;
+    body {
+        font-size: 1.25em;
     }
 }
