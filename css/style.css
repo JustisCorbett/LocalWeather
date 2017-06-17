@@ -16,13 +16,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
 }
 .tempBox{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+}
+.ForCbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    background-color: black;
+    color: gray;
+    border: 2px solid gray;
+    cursor:pointer;
+    font-size: 0.75em;
+    padding: 0.25em;
+    margin:5px
 }
 @media screen and (max-width: 960px) {
     .titleText {
