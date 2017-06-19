@@ -16,10 +16,9 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function ( data ) {
                 console.log(data);
-        		var post = data.shift(1); // The data is an array of posts. Grab the first one.
-				var tempWeath = post.content;
-				quote = tempWeath.replace(/(<p[^>]+?>|<p>|<\/p>)/img, ""); //remove p tags
-				author = "&mdash; " + post.title;
+				var tempWeathr = data.currently;
+				console.log(tempWeather);
+				
        			$( '#author' ).html( author );
        			$( '#quotes' ).html( quote );
 				},
