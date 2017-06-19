@@ -11,7 +11,7 @@ $(document).ready(function(){
     function getWeather(position){
         console.log(position);
         $.ajax({
-			url: 'https://api.darksky.net/forecast/d39b3dba17a4022bcddeb356e233c352/' + position.coords.latitude + ',' + position.coords.longitude + '?exclude=currently,minutely,daily,alerts,flags',
+			url: 'https://api.darksky.net/forecast/d39b3dba17a4022bcddeb356e233c352/' + position.coords.latitude + ',' + position.coords.longitude + '?exclude=hourly,minutely,daily,alerts,flags',
 					
 			dataType: 'json',
 			success: function ( data ) {
