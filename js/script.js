@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	var weatherSum;
-	var temperatureC = false;
+	var C = false;
+	var F;
+	var iconSelector;
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getWeather);
@@ -18,15 +20,22 @@ $(document).ready(function(){
                 console.log(data);
 				weatherSum = data.currently;
 				console.log(weatherSum);
-				
+				icon = weatherSum.icon;
        			$( '.currentWeather' ).html( weatherSum.summary );
-       			$( '#quotes' ).html( quote );
+       			F = weatherSum.temperature;
+				iconSelector = weatherSum.icon;
 				},
 				cache: false
 				});
 			};
-	function tempToggle(){
-
-	};
     getLocation();
 });
+$(".celcius").on("click", function(C){
+    	C = true;
+		setTemperature();
+});
+function setTemperature(F,C){
+		if (C){
+			return Math.round((F-32)*(5/9));
+		}
+	};
