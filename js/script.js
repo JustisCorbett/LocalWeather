@@ -16,7 +16,7 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function ( data ) {
                 console.log(data);
-				var tempWeathr = JSON.parse(data);
+				var tempWeathr = data.currently;
 				console.log(tempWeather);
 				
        			$( '.' ).html( author );
