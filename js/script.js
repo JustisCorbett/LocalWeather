@@ -16,16 +16,16 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function ( data ) {
                 console.log(data);
-				var weatherSum = data.currently;
+				weatherSum = data.currently;
 				console.log(weatherSum);
 				
-       			$( '.' ).html( author );
+       			$( '.currentWeather' ).html( weatherSum.summary );
        			$( '#quotes' ).html( quote );
 				},
 				cache: false
 				});
 			};
-	function ForCToggle(){
+	function tempToggle(){
 
 	};
     getLocation();
