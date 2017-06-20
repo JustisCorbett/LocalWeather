@@ -19,7 +19,7 @@ $(document).ready(function(){
 				var tempWeathr = data.currently;
 				console.log(tempWeather);
 				
-       			$( '#author' ).html( author );
+       			$( '.' ).html( author );
        			$( '#quotes' ).html( quote );
 				},
 				cache: false
