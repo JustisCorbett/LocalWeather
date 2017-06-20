@@ -30,26 +30,26 @@ $(document).ready(function(){
 			};
     getLocation();
 });
+function setTemperature(F,C){
+	if (C){
+		$(".temperature").html(Math.round((F-32)*(5/9)));
+		$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
+		$(".tempicon").addClass("wi-celcius");
+		$(".celcius").css({color:"white", border:"2px solid white"});
+		$(".fahrenheit").css({color:"grey", border:"2px solid grey"});
+	} else {
+		$(".temperature").html(F);
+		$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
+		$(".tempicon").addClass("wi-fahrenheit");
+		$(".fahrenheit").css({color:"white", border:"2px solid white"});
+		$(".celcius").css({color:"grey", border:"2px solid grey"});
+	}
+};
 $(".celcius").on("click", function(C){
-    	C = true;
-		setTemperature();
+    C = true;
+	setTemperature();
 });
 $(".fahrenheit").on("click", function(C){
-		C = false;
-		setTemperature();
+	C = false;
+	setTemperature();
 });
-function setTemperature(F,C){
-		if (C){
-			$(".temperature").html(Math.round((F-32)*(5/9)));
-			$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
-			$(".tempicon").addClass("wi-celcius");
-			$(".celcius").css({color:"white", border:"2px solid white"});
-			$(".fahrenheit").css({color:"grey", border:"2px solid grey"});
-		} else {
-			$(".temperature").html(F);
-			$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
-			$(".tempicon").addClass("wi-fahrenheit");
-			$(".fahrenheit").css({color:"white", border:"2px solid white"});
-			$(".celcius").css({color:"grey", border:"2px solid grey"});
-		}
-	};
