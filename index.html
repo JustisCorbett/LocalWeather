@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
         <script src="js/script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Poiret+One|Megrim" rel="stylesheet">
-                
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -30,11 +30,11 @@
         </div>
         <div class="tempBox">
             <span class="temperature">placeholdertemp</span>
-            <span class="wi wi-fahrenheit tempIcon"></span>
+            <span id="tempIcon" class="wi wi-fahrenheit"></span>
         </div>
         <div class="ForCbuttons">
-            <button type="button" class="btn fahrenheit wi wi-fahrenheit"></button>
-            <button type="button" class="btn celcius wi wi-celsius"></button>
+            <button id="fahrenheit" type="button" class="btn wi wi-fahrenheit"></button>
+            <button id="celcius" type="button" class="btn wi wi-celsius"></button>
         </div>
         <footer><p>Created by Justis Corbett with Dark Sky API.</p></footer>
     </body>

@@ -24,32 +24,40 @@ $(document).ready(function(){
        			$( '.currentWeather' ).html( weatherSum.summary );
        			F = weatherSum.temperature;
 				iconSelector = weatherSum.icon;
+				console.log(F);
+				console.log(iconSelector);
+				setTemperature(F,C);
 				},
 				cache: false
 				});
 			};
-    getLocation();
-});
-function setTemperature(F,C){
-	if (C){
-		$(".temperature").html(Math.round((F-32)*(5/9)));
-		$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
-		$(".tempicon").addClass("wi-celcius");
-		$(".celcius").css({color:"white", border:"2px solid white"});
-		$(".fahrenheit").css({color:"grey", border:"2px solid grey"});
-	} else {
-		$(".temperature").html(F);
-		$(".tempIcon").removeClass("wi-fahrenheit wi-celcius");
-		$(".tempicon").addClass("wi-fahrenheit");
-		$(".fahrenheit").css({color:"white", border:"2px solid white"});
-		$(".celcius").css({color:"grey", border:"2px solid grey"});
+	function setTemperature(F,C){
+		if (C){
+			$(".temperature").html(String(Math.round((F-32)*(5/9))));
+			$("#tempIcon").removeClass("wi-fahrenheit").addClass("wi-celsius");
+			$("#celcius").css({color:"white", border:"2px solid white"});
+			$("#fahrenheit").css({color:"grey", border:"2px solid grey"});
+		} else {
+			$(".temperature").html(String(F));
+			$("#tempIcon").removeClass("wi-celsius").addClass("wi-fahrenheit");
+			$("#fahrenheit").css({color:"white", border:"2px solid white"});
+			$("#celcius").css({color:"grey", border:"2px solid grey"});
 	}
-};
-$(".celcius").on("click", function(C){
-    C = true;
-	setTemperature();
+	};
+	function setIcon(iconSelector){
+		switch(iconSelector){
+			case ""
+		}
+	};
+    getLocation();
+	$("#celcius").on("click", function(C){
+    	C = true;
+		setTemperature(F,C);
+	});
+	$("#fahrenheit").on("click", function(C){
+		C = false;
+		setTemperature(F,C);
+	});
 });
-$(".fahrenheit").on("click", function(C){
-	C = false;
-	setTemperature();
-});
+
+
