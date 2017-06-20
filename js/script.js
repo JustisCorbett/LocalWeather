@@ -27,6 +27,7 @@ $(document).ready(function(){
 				console.log(F);
 				console.log(iconSelector);
 				setTemperature(F,C);
+				setIcon(iconSelector);
 				},
 				cache: false
 				});
@@ -46,8 +47,39 @@ $(document).ready(function(){
 	};
 	function setIcon(iconSelector){
 		switch(iconSelector){
-			case ""
-		}
+			case "clear-day":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-day-sunny");
+				break;
+			case "clear-night":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-night-clear");
+				break;
+			case "rain":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-rain");
+				break;
+			case "snow":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-snow");
+				break;
+			case "sleet":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-sleet");
+				break;
+			case "wind":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-strong-wind");
+				break;
+			case "fog":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-fog");
+				break;
+			case "cloudy":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-cloudy");
+				break;
+			case "partly-cloudy-day":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-day-cloudy");
+				break;
+			case "partly-cloudy-night":
+				$("#weatherIcon").removeClass("wi-na").addClass("wi-night-alt-cloudy");
+				break;
+			default:
+				break;
+		};
 	};
     getLocation();
 	$("#celcius").on("click", function(C){
