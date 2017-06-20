@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var weatherSum;
-	var temperature;
+	var temperatureC = false;
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getWeather);
@@ -16,8 +16,8 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function ( data ) {
                 console.log(data);
-				var tempWeathr = data.currently;
-				console.log(tempWeather);
+				var weatherSum = data.currently;
+				console.log(weatherSum);
 				
        			$( '.' ).html( author );
        			$( '#quotes' ).html( quote );
@@ -25,5 +25,8 @@ $(document).ready(function(){
 				cache: false
 				});
 			};
+	function ForCToggle(){
+
+	};
     getLocation();
 });
