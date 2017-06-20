@@ -39,7 +39,7 @@ $(document).ready(function(){
 			$("#celcius").css({color:"white", border:"2px solid white"});
 			$("#fahrenheit").css({color:"grey", border:"2px solid grey"});
 		} else {
-			$(".temperature").html(String(F));
+			$(".temperature").html(String(Math.round(F)));
 			$("#tempIcon").removeClass("wi-celsius").addClass("wi-fahrenheit");
 			$("#fahrenheit").css({color:"white", border:"2px solid white"});
 			$("#celcius").css({color:"grey", border:"2px solid grey"});
